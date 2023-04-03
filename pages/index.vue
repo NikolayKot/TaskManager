@@ -2,71 +2,72 @@
     <title>Authorization</title>
 
     <div class="Container">
-        <div class="LogIn">            
-            <form v-if="isElemVisible" class="LogInForm SignUp">
+        <div v-if="isElemVisible" class="SignUp">
+            <form class="LogInForm ">
 
-                <img src="../img/Logo.png" alt="Логотип приложения" class="logo">
+            <img src="../img/Logo.png" alt="Логотип приложения" class="logo">
 
-                <H2 class="FormText">Регистрация</H2>
+            <H2 class="FormText">Sign Up</H2>
 
-                <div class="FormContainer">
-                    <label for="Authorization" class="labelText">Логин</label>
+            <div class="FormContainer">
+                <label for="Authorization" class="labelText">Login</label>
 
-                    <input type="text" placeholder="Логин"  class="FormInput FormText">
-                </div>
+                <input type="text" placeholder="Login"  class="FormInput FormText">
+            </div>
+
+            <div class="FormContainer">
+                <label for="Authorization" class="labelText">Password</label>
+
+                <input type="text" placeholder="Password" class="FormInput FormText">
+            </div>
+
+            <div class="FormContainer">
+                <label for="Authorization" class="labelText">Repeat the password</label>
+
+                <input type="text" placeholder="Password" class="FormInput FormText">
+            </div>
+
+            <button class="FormRegButton FormButton"> 
+                <NuxtLink to="/Profile" class="FormButton FormText">Sign Up</NuxtLink>
+            </button>
+
+            <div class="CreateAccount">
+                <div class="CreateAccountText">Have an account ?</div>
                 
-                <div class="FormContainer">
-                    <label for="Authorization" class="labelText">Пароль</label>
-                
-                    <input type="text" placeholder="Пароль" class="FormInput FormText">
+                <div @click="isElemVisible = !isElemVisible">
+                    <a href="#" class="AccontLink">Log In</a>
                 </div>
-
-                <div class="FormContainer">
-                    <label for="Authorization" class="labelText">Повторите пароль</label>
-                
-                    <input type="text" placeholder="Пароль" class="FormInput FormText">
-                </div>
-
-                <button class="FormRegButton FormButton"> 
-                    <NuxtLink to="/Profile" class="FormButton FormText">Зарегистрироваться</NuxtLink>
-                </button>
-
-                <div class="CreateAccount">
-                    <div class="CreateAccountText">Есть аккаунт ?</div>
-                    
-                    <div @click="isElemVisible = !isElemVisible">
-                        <a href="#" class="AccontLink">Войти</a>
-                    </div>
-                </div>
+            </div>
             </form>
+        </div>            
             
-            
-            <form v-else class="LogInForm">
+        <div v-else class="LogIn">
+            <form class="LogInForm">
                 <img src="../img/Logo.png" alt="Логотип приложения" class="logo">
 
-                <H2 class="FormText">Вход</H2>
+                <H2 class="FormText">Log In</H2>
 
                 <div class="FormContainer">
-                    <label for="Authorization" class="labelText">Логин</label>
+                    <label for="Authorization" class="labelText">Login</label>
 
-                    <input type="text" placeholder="Логин"  class="FormInput FormText">
+                    <input type="text" placeholder="Login"  class="FormInput FormText">
                 </div>
                 
                 <div class="FormContainer">
-                    <label for="Authorization" class="labelText">Пароль</label>
+                    <label for="Authorization" class="labelText">Password</label>
                 
-                    <input type="text" placeholder="Пароль" class="FormInput FormText">
+                    <input type="text" placeholder="Password" class="FormInput FormText">
                 </div>
 
                 <button class="Button FormButton"> 
-                    <NuxtLink to="/Profile" class="FormButton FormText">Войти</NuxtLink>
+                    <NuxtLink to="/Profile" class="FormButton FormText">Log In</NuxtLink>
                 </button>
 
                 <div class="CreateAccount">
-                    <div class="CreateAccountText">Нет аккаунта ?</div>
+                    <div class="CreateAccountText">No account ?</div>
                     
                     <div @click="isElemVisible = !isElemVisible">
-                        <a href="#" class="AccontLink">Создайть аккаунт</a>
+                        <a href="#" class="AccontLink">Create an account</a>
                     </div>
                 </div>
             </form>

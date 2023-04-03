@@ -1,13 +1,12 @@
 <template>
     <title>Authorization</title>
 
-    <NuxtLink to="/">
-        <img src="../img/Logo.png" alt="Логотип приложения" class="logo">
-    </NuxtLink>
-
     <div class="Container">
-        <div class="LogIn">
+        <div class="LogIn">            
             <form v-if="isElemVisible" class="LogInForm SignUp">
+
+                <img src="../img/Logo.png" alt="Логотип приложения" class="logo">
+
                 <H2 class="FormText">Регистрация</H2>
 
                 <div class="FormContainer">
@@ -29,19 +28,22 @@
                 </div>
 
                 <button class="FormRegButton FormButton"> 
-                    <NuxtLink to="/Profile" class="FormButton FormText">Регистрация</NuxtLink>
+                    <NuxtLink to="/Profile" class="FormButton FormText">Зарегистрироваться</NuxtLink>
                 </button>
 
-                <button @click="isElemVisible = !isElemVisible" class="RegButton">
-                    <div class="RegLine"></div>
+                <div class="CreateAccount">
+                    <div class="CreateAccountText">Есть аккаунт ?</div>
                     
-                    <div>Войти</div>
-                    
-                    <div class="RegLine"></div>
-                </button>
+                    <div @click="isElemVisible = !isElemVisible">
+                        <a href="#" class="AccontLink">Войти</a>
+                    </div>
+                </div>
             </form>
-
+            
+            
             <form v-else class="LogInForm">
+                <img src="../img/Logo.png" alt="Логотип приложения" class="logo">
+
                 <H2 class="FormText">Вход</H2>
 
                 <div class="FormContainer">
@@ -60,13 +62,13 @@
                     <NuxtLink to="/Profile" class="FormButton FormText">Войти</NuxtLink>
                 </button>
 
-                <button @click="isElemVisible = !isElemVisible" class="RegButton">
-                    <div class="RegLine"></div>
+                <div class="CreateAccount">
+                    <div class="CreateAccountText">Нет аккаунта ?</div>
                     
-                    <div>Регистрация</div>
-                    
-                    <div class="RegLine"></div>
-                </button>
+                    <div @click="isElemVisible = !isElemVisible">
+                        <a href="#" class="AccontLink">Создайть аккаунт</a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

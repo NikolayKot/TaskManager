@@ -15,7 +15,7 @@ body {
 
 .LogIn {
     width: 300px;
-    height: 420px;
+    height: 440px;
     border-radius: 20px;
     background: #ffffff;
     position: absolute;
@@ -23,7 +23,7 @@ body {
 
 .SignUp {
     width: 300px;
-    height: 510px;
+    height: 520px;
     border-radius: 20px;
     background: #ffffff;
     position: absolute;
@@ -145,5 +145,30 @@ body {
     cursor: default;
     color: #232360;
     font-weight: 500;
+}
+
+.FormInputWrong {
+    padding: 13px 0px 14px 17px;
+    width: 92%;
+    height: 18px;
+    background: #F3F4F8;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 6px;
+    border: 2px solid #ff0000;
+    border-radius: 9px;
+}
+
+.wrongInputText {
+    color: #ff0000;
+    font-family: 'DM Sans', sans-serif;
+    cursor: default;
+    font-weight: 500;
+    font-size: 14px;
+    
 }
 

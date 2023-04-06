@@ -11,24 +11,32 @@
 
             <div class="FormContainer">
                 <label for="Authorization" class="labelText">Login</label>
-
-                <input type="text" placeholder="Login"  class="FormInput FormText">
+                
+                <input type="text" placeholder="Login" v-model="regLogin" class="FormInput FormText">
             </div>
 
             <div class="FormContainer">
                 <label for="Authorization" class="labelText">Password</label>
 
-                <input type="text" placeholder="Password" class="FormInput FormText">
+                <input  v-if="isElemCorrect" type="password" placeholder="Password" v-model="regPassword" class="FormInput FormText">
+                
+                <input v-else type="password" placeholder="Password" v-model="regPassword" class="FormInputWrong FormText">
             </div>
 
             <div class="FormContainer">
                 <label for="Authorization" class="labelText">Repeat the password</label>
 
-                <input type="text" placeholder="Password" class="FormInput FormText">
+                <input v-if="isElemCorrect" type="password" placeholder="Repeat the password" v-model="repRegPassword" class="FormInput FormText">
+                
+                <div v-else>
+                    <input type="password" placeholder="Repeat the password" v-model="repRegPassword" class="FormText FormInputWrong">
+                    
+                    <div class="wrongInputText">Passwords do not match, check the correctness of the input.</div>
+                </div>
             </div>
 
-            <button class="FormRegButton FormButton"> 
-                <NuxtLink to="/Profile" class="FormButton FormText">Sign Up</NuxtLink>
+            <button type="button" @click="registration" class="FormRegButton FormButton"> 
+                <div class="FormButton FormText">Sign Up</div>
             </button>
 
             <div class="CreateAccount">
@@ -50,17 +58,27 @@
                 <div class="FormContainer">
                     <label for="Authorization" class="labelText">Login</label>
 
-                    <input type="text" placeholder="Login"  class="FormInput FormText">
+                    <input v-if="isLoginCorrect" type="text" placeholder="Login" v-model="login" class="FormInput FormText">
+                    
+                    <div v-else>
+                        <input type="text" placeholder="Login" v-model="login" class="FormInputWrong FormText">
+                    </div>
                 </div>
                 
                 <div class="FormContainer">
                     <label for="Authorization" class="labelText">Password</label>
-                
-                    <input type="text" placeholder="Password" class="FormInput FormText">
+                    
+                    <input v-if="isLoginCorrect" type="password" placeholder="Password" v-model="password" class="FormInput FormText">
+                    
+                    <div v-else>
+                        <input type="password" placeholder="Password" v-model="password" class="FormInputWrong FormText">
+                    
+                        <div class="wrongInputText">Incorrect login or password.</div>
+                    </div>
                 </div>
 
-                <button class="Button FormButton"> 
-                    <NuxtLink to="/Profile" class="FormButton FormText">Log In</NuxtLink>
+                <button v-on:click="inlet" type="button" class="Button FormButton"> 
+                    <div class="FormButton FormText">Log In</div>
                 </button>
 
                 <div class="CreateAccount">
@@ -81,13 +99,5 @@
 
 </style>
 
-<script>
-    export default {
-        data: () => {
-            return {
-                isElemVisible: false
-            }
-            
-        }
-    }
-</script>
+<script src="../scripts/index.js"></script>
+

@@ -47,7 +47,7 @@ export default {
                 localStorage.regPassword = this.regPassword;
                 localStorage.repRegPassword = this.repRegPassword;
                 this.isElemCorrect = true;
-                window.location.href = 'http://localhost:3000/Profile'
+                window.location.href = 'http://localhost:3000/profile'
             }
         },
         inlet() {
@@ -58,7 +58,7 @@ export default {
                 this.isLoginCorrect = false;
             } 
             else {
-                window.location.href = 'http://localhost:3000/Profile'
+                window.location.href = 'http://localhost:3000/profile'
             }
         }
     }

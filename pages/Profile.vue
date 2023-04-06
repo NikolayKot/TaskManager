@@ -1,5 +1,5 @@
 <template>
-    <title>Profile</title>
+    <title>profile</title>
     <button> 
         <NuxtLink to="/">Home</NuxtLink>
     </button>

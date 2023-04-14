@@ -1,6 +1,8 @@
 <template>
-    <title>profile</title>
     <button> 
         <NuxtLink to="/">Home</NuxtLink>
     </button>
 </template>
+
+
+<script src="./scripts/profile.js"></script>

@@ -1,20 +1,16 @@
 <template>
     <div class="container">
-        <div v-if="isRegistrationVisible" class="signUp">
-            <registrationForm/>
+        <div v-if="isRegistrationVisible" class="signup">
+            <RegistrationForm/>
 
-            <button @click="registrationVisible">Переключить</button>
-        </div>            
-            
-        <div v-else class="logIn">
-           <loginForm/>
+            <button @click="registrationVisible">showRegistration</button>
+        </div>               
+        <div v-else class="login">
+           <LoginForm/>
 
-           <button @click="registrationVisible">Переключить</button> 
+           <button @click="registrationVisible">showRegistration</button> 
         </div>
     </div>
 </template>
-
-<style src="~/assets/index.css"></style>
-
-<script src="./scripts/index.js"></script>
-
+<style src="~/assets/pages/index.scss"></style>
+<script src="~/pages/indexScript.js"></script>

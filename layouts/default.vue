@@ -1,7 +1,6 @@
 <template>
-    <div class="DefaultLayout">
+    <div>
         <slot/>
     </div>
 </template>
-
-<style src="~/assets/default.css"></style>
+<style src="~/assets/default.scss"></style>

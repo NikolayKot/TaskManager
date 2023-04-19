@@ -1,26 +1,28 @@
 <template>
     <form class="form">
-        <img src="/logo.png" alt="logotype" class="logo">
+        <img src="/logo.png" alt="Application logo" class="logo">
 
         <h1 class="text">Log In</h1>
 
         <div class="box">
-            <label for="input" class="labelText">Login</label>
+            <label class="label-text">
+                Login
 
-            <input  :class="{active: isLoginWrong}" type="text" placeholder="Login" v-model="login">
+                <input :class="{active: isLoginWrong}" type="text" placeholder="Login" v-model="login">
+            </label>
         </div>
         
         <div class="box">
-            <label for="input" class="labelText">Password</label>
+            <label class="label-text">
+                Password
             
-            <input :class="{active: isLoginWrong}" type="password" placeholder="Password" v-model="password">
+                <input :class="{active: isLoginWrong}" type="password" placeholder="Password" v-model="password">
+            </label>
             
-            <div :class="{wrongInputText: isLoginWrong}" class="visible">Password or username entered incorrectly.</div>
+            <div :class="{'wrong-input': isLoginWrong}" class="visible">Password or username entered incorrectly.</div>
         </div>
 
-        <button @click="logining" type="button">Log In</button>
-
+        <button @click="logIn" type="button">Log In</button>
     </form>
 </template>
-
-<script src="./scripts/loginForm"></script>
+<script src="~/components/loginFormScript.js"></script>

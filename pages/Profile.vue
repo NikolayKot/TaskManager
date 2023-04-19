@@ -3,6 +3,4 @@
         <NuxtLink to="/">Home</NuxtLink>
     </button>
 </template>
-
-
-<script src="./scripts/profile.js"></script>
+<script src="~/pages/profileScript.js"></script>

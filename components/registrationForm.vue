@@ -1,33 +1,37 @@
 <template>
     <form class="form">
-
-        <img src="/logo.png" alt="logotype" class="logo">
+        <img src="/logo.png" alt="Application logo" class="logo">
 
         <h1 class="text">Sign Up</h1>
 
         <div class="box">
-            <label for="input" class="labelText">Login</label>
             
-            <input :class="{active: isRegistrationWrong}" type="text" placeholder="Login" v-model="registrationLogin">
+            <label class="label-text">
+                Login
+                
+                <input :class="{active: isRegistrationWrong}" type="text" placeholder="Login" v-model="login">
+            </label>
         </div>
 
         <div class="box">
-            <label for="input" class="labelText">Password</label>
+            <label class="label-text">
+                Password
 
-            <input  :class="{active: isRegistrationWrong}" type="password" placeholder="Password" v-model="registrationPassword">
+                <input :class="{active: isRegistrationWrong}" type="password" placeholder="Password" v-model="password">
+            </label>
         </div>
 
         <div class="box">
-            <label for="input" class="labelText">Repeat the password</label>
+            <label class="label-text">
+                Repeat the password
 
-            <input :class="{active: isRegistrationWrong}" type="password" placeholder="Repeat the password" v-model="repeatRegistrationPassword">
+                <input :class="{active: isRegistrationWrong}" type="password" placeholder="Repeat the password" v-model="repeatPassword">
+            </label>
             
-            <div :class="{wrongInputText: isRegistrationWrong}" class="visible">Passwords do not match, check the correctness of the input.</div>
+            <div :class="{'wrong-input': isRegistrationWrong}" class="visible">Passwords do not match, check the correctness of the input.</div>
         </div>
 
         <button type="button" @click="register">Sign Up</button>
-
     </form>
 </template>
-
-<script src="./scripts/registrationForm"></script>
+<script src="~/components/registrationFormScript.js"></script>

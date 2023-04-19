@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+:root {
+    --container-colour: #F3F4F8;
+    --white: #FFFFFF;
+    --wrong-border: #FF0000;
+    --label: #232360;
+    --border: #E5E5ED;
+    --input-text: #737373;
+    --button: #5051F9;
+}
+
+.container {
+    background: var(--container-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    width: 300px;
+    height: 440px;
+    border-radius: 20px;
+    background: var(--white);
+    position: absolute;
+}
+
+.signup {
+    width: 300px;
+    height: 520px;
+    border-radius: 20px;
+    background: var(--white);
+    position: absolute; 
+}
+
+.form {
+    width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    .text {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 30px;
+        margin: 0 auto;
+        color: var(--label);
+        font-weight: 700;
+    }
+
+    button {
+        padding: 11px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-style: none;
+        width: 90%;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: var(--white);
+        text-decoration: none;
+        background: var(--button);
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+
+    input {
+        padding: 13px 0px 14px 17px;
+        width: 92%;
+        height: 18px;
+        background: var(--container-colour);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        color: var(--input-text);
+        margin-top: 6px;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    button:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 13px 2px rgb(197, 197, 197);
+        transition: all ease 0.2s;
+    }
+    
+    .box {
+        margin-top: 10px;
+        width: 90%;
+    }
+    
+    .active {
+        border: 2px solid var(--wrong-border);
+    }
+}
+
+.logo {
+    margin: 0px 118px 0px 118px;
+}
+
+.label-text {
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--label);
+}
+
+.visible {
+    padding-top: 2px;
+    visibility: hidden;
+}
+
+.wrong-input {
+    color: var(--wrong-border);
+    font-family: 'DM Sans', sans-serif;
+    cursor: default;
+    font-weight: 500;
+    font-size: 14px; 
+    visibility: visible;
+}

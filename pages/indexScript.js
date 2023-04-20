@@ -11,7 +11,7 @@ export default {
         }
     },
     methods: {
-        registrationVisible() {
+        switchForm() {
             this.isRegistrationVisible  =! this.isRegistrationVisible
         }
     },

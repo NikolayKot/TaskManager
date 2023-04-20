@@ -9,7 +9,7 @@
             <label class="label-text">
                 Login
                 
-                <input :class="{active: isRegistrationWrong}" type="text" placeholder="Login" v-model="login">
+                <input :class="{active: isWrong}" type="text" placeholder="Login" v-model="login">
             </label>
         </div>
 
@@ -17,7 +17,7 @@
             <label class="label-text">
                 Password
 
-                <input :class="{active: isRegistrationWrong}" type="password" placeholder="Password" v-model="password">
+                <input :class="{active: isWrong}" type="password" placeholder="Password" v-model="password">
             </label>
         </div>
 
@@ -25,13 +25,14 @@
             <label class="label-text">
                 Repeat the password
 
-                <input :class="{active: isRegistrationWrong}" type="password" placeholder="Repeat the password" v-model="repeatPassword">
+                <input :class="{active: isWrong}" type="password" placeholder="Repeat the password" v-model="repeatPassword">
             </label>
             
-            <div :class="{'wrong-input': isRegistrationWrong}" class="visible">Passwords do not match, check the correctness of the input.</div>
+            <div :class="{'wrong-input': isWrong}" class="visible">Passwords do not match, check the correctness of the input.</div>
         </div>
 
         <button type="button" @click="register">Sign Up</button>
     </form>
 </template>
+
 <script src="~/components/registrationFormScript.js"></script>

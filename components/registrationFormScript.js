@@ -1,7 +1,7 @@
 export default {
     data: () => {
         return {
-            isRegistrationWrong: false,
+            isWrong: false,
             login: '',
             password: '',
             repeatPassword: '',
@@ -10,12 +10,12 @@ export default {
     methods: {
         register() {
             if (this.password != this.repeatPassword || this.login == '') {
-                this.isRegistrationWrong = true;
+                this.isWrong = true;
                 return;
             } 
             localStorage.login = this.login;
             localStorage.password = this.password;
-            this.isRegistrationWrong = false;
+            this.isWrong = false;
             window.location.href = '/profile';
         }
     }

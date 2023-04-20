@@ -8,7 +8,7 @@
             <label class="label-text">
                 Login
 
-                <input :class="{active: isLoginWrong}" type="text" placeholder="Login" v-model="login">
+                <input :class="{active: isWrong}" type="text" placeholder="Login" v-model="login">
             </label>
         </div>
         
@@ -16,13 +16,14 @@
             <label class="label-text">
                 Password
             
-                <input :class="{active: isLoginWrong}" type="password" placeholder="Password" v-model="password">
+                <input :class="{active: isWrong}" type="password" placeholder="Password" v-model="password">
             </label>
             
-            <div :class="{'wrong-input': isLoginWrong}" class="visible">Password or username entered incorrectly.</div>
+            <div :class="{'wrong-input': isWrong}" class="visible">Password or username entered incorrectly.</div>
         </div>
 
         <button @click="logIn" type="button">Log In</button>
     </form>
 </template>
+
 <script src="~/components/loginFormScript.js"></script>

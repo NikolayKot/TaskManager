@@ -36,12 +36,12 @@
 </template>
 
 <script>
+    import dataMixin from '~/mixins/autorizationMixin.js'
+    
     export default {
+        mixins: [dataMixin],  
         data: () => {
             return {
-                isWrong: false,
-                login: '',
-                password: '',
                 repeatPassword: '',
             }
         },

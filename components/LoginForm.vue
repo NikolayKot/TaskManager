@@ -27,14 +27,10 @@
 </template>
 
 <script>
+    import dataMixin from '~/mixins/autorizationMixin.js'
+
     export default {
-        data: () => {
-            return {
-                isWrong: false,
-                login: '',
-                password: '',
-            }
-        },
+        mixins: [dataMixin],
         methods: {
             logIn() {
                 if (this.login != localStorage.login || this.password != localStorage.password) {

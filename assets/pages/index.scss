@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 :root {
-    --container-colour: #F3F4F8;
-    --white: #FFFFFF;
-    --wrong-border: #FF0000;
+    --main-colour: #F3F4F8;
+    --primary-colour: #FFFFFF;
+    --wrong-colour: #FF0000;
     --label: #232360;
     --border: #E5E5ED;
     --input-text: #737373;
-    --button: #5051F9;
+    --accent-colour: #5051F9;
 }
 
 .container {
-    background: var(--container-colour);
+    background: var(--main-colour);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
     width: 300px;
     height: 440px;
     border-radius: 20px;
-    background: var(--white);
+    background: var(--primary-colour);
     position: absolute;
 }
 
@@ -29,7 +29,7 @@
     width: 300px;
     height: 520px;
     border-radius: 20px;
-    background: var(--white);
+    background: var(--primary-colour);
     position: absolute; 
 }
 
@@ -62,9 +62,9 @@
         line-height: 28px;
         text-align: center;
         letter-spacing: 0.2px;
-        color: var(--white);
+        color: var(--primary-colour);
         text-decoration: none;
-        background: var(--button);
+        background: var(--accent-colour);
         border-radius: 8px;
         margin-top: 5px;
     }
@@ -79,7 +79,7 @@
         padding: 13px 0px 14px 17px;
         width: 92%;
         height: 18px;
-        background: var(--container-colour);
+        background: var(--main-colour);
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
@@ -98,7 +98,7 @@
     }
     
     .active {
-        border: 2px solid var(--wrong-border);
+        border: 2px solid var(--wrong-colour);
     }
 }
 
@@ -118,7 +118,7 @@
 }
 
 .wrong-input {
-    color: var(--wrong-border);
+    color: var(--wrong-colour);
     font-family: 'DM Sans', sans-serif;
     cursor: default;
     font-weight: 500;

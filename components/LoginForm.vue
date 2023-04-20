@@ -27,10 +27,10 @@
 </template>
 
 <script>
-    import data from '~/mixins/form.js'
+    import SignForm from '~/mixins/SignForm.js'
 
     export default {
-        mixins: [data],
+        mixins: [SignForm],
         methods: {
             logIn() {
                 if (this.login != localStorage.login || this.password != localStorage.password) {

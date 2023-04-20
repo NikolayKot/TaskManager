@@ -36,10 +36,10 @@
 </template>
 
 <script>
-    import dataMixin from '~/mixins/autorizationMixin.js'
+    import data from '~/mixins/form.js'
     
     export default {
-        mixins: [dataMixin],  
+        mixins: [data],  
         data: () => {
             return {
                 repeatPassword: '',

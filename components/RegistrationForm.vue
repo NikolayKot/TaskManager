@@ -4,7 +4,7 @@
 
         <h1 class="text">Sign Up</h1>
 
-        <div class="box">
+        <div class="form-row">
             
             <label class="label-text">
                 Login
@@ -13,7 +13,7 @@
             </label>
         </div>
 
-        <div class="box">
+        <div class="form-row">
             <label class="label-text">
                 Password
 
@@ -21,7 +21,7 @@
             </label>
         </div>
 
-        <div class="box">
+        <div class="form-row">
             <label class="label-text">
                 Repeat the password
 

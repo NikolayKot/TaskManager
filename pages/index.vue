@@ -3,12 +3,16 @@
         <div v-if="isRegistrationVisible" class="signup">
             <RegistrationForm/>
 
-            <button @click="switchForm">switchForm</button>
+            <div class="switch-container">
+                <button @click="switchForm" class="switch-button">Log In</button> 
+            </div>
         </div>               
         <div v-else class="login">
-           <LoginForm/>
+            <LoginForm/>
 
-           <button @click="switchForm">switchForm</button> 
+            <div class="switch-container">
+                <button @click="switchForm">Sign Up</button> 
+            </div>
         </div>
     </div>
 </template>

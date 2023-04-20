@@ -4,7 +4,7 @@
 
         <h1 class="text">Log In</h1>
 
-        <div class="box">
+        <div class="form-row">
             <label class="label-text">
                 Login
 
@@ -12,7 +12,7 @@
             </label>
         </div>
         
-        <div class="box">
+        <div class="form-row">
             <label class="label-text">
                 Password
             

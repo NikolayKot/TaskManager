@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div @click="escape" class="exit">
+                <div @click="quit" class="exit">
                     <div :class="{active: rotation}"></div>
                     
                     <div :class="{'active-wand' : rotateWand}" class="exit-wand"></div>
@@ -64,7 +64,7 @@
             }
         },
         methods: {
-            escape() {
+            quit() {
                 this.rotation  =! this.rotation
                 this.rotateWand  =! this.rotateWand
             },

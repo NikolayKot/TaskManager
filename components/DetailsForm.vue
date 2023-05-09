@@ -9,7 +9,7 @@
 
             <label>
                 Last name
-                
+
                 <input type="text" placeholder="Enter your last name" v-model="surname">
             </label>
         </div>
@@ -17,7 +17,7 @@
         <div class="email-field">
             <label>
                 Email
-                
+
                 <div class="email">
                     <img src="/email.png" alt="Значёк email" class="searchIcon">
 
@@ -27,7 +27,7 @@
             
             <label>
                 Role
-                
+
                 <div class="email">
                     <input type="text" placeholder="Enter your role" v-model="role">
                 </div>
@@ -37,7 +37,7 @@
         <div class="buttons">
             <button class="cancel-button">Cancel</button>
             
-            <button @click="transform">Save</button>
+            <button @click="save">Save</button>
         </div>
     </div>
 </template>
@@ -53,7 +53,7 @@
             }
         },
         methods: {
-            transform() {
+            save() {
                 localStorage.name = this.name
                 localStorage.surname = this.surname
                 localStorage.email = this.email
@@ -62,16 +62,16 @@
         },
         mounted() {
             if (localStorage.name) {
-            this.name = localStorage.name;
+                this.name = localStorage.name;
             }
             if (localStorage.surname) {
-            this.surname = localStorage.surname;
+                this.surname = localStorage.surname;
             }
             if (localStorage.email) {
-            this.email = localStorage.email;
+                this.email = localStorage.email;
             }
             if (localStorage.role) {
-            this.role = localStorage.role;
+                this.role = localStorage.role;
             }
         }
     }

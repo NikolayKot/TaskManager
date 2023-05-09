@@ -2,6 +2,7 @@
     <div class="profile-info">
         <label>
             Login
+            
             <input type="text" placeholder="Enter your login" v-model="login">
         </label>
 
@@ -14,7 +15,7 @@
         <div class="buttons">
             <button class="cancel-button">Cancel</button>
             
-            <button @click="transform">Save</button>
+            <button @click="save">Save</button>
         </div>
     </div>
 </template>
@@ -25,17 +26,17 @@
     export default {
         mixins: [SignForm],
         methods: {
-            transform() {
+            save() {
                 localStorage.login = this.login
                 localStorage.password = this.password
             }
         },
         mounted() {
             if (localStorage.login) {
-            this.login = localStorage.login;
+                this.login = localStorage.login;
             }
             if (localStorage.password) {
-            this.password = localStorage.password;
+                this.password = localStorage.password;
             }
         }
     }

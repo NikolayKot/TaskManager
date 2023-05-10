@@ -24,7 +24,7 @@
         border-radius: 100%;
         position: absolute;
         margin: 234px 0px 0px 50px;
-        background-color: var(--primary-colour);
+        background-color: var(--border);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,7 +43,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--border, 0.5);
+            background-color: var(--primary-colour, 0.5);
             font-family: 'DM Sans';
             font-style: normal;
             font-weight: 500;
@@ -93,7 +93,7 @@
     margin-top: 40px;
 
     button {
-        color: var(--primary-colour);
+        color: var(--border);
         background-color: var(--accent-colour);
         width: 64px;
         height: 40px;
@@ -112,7 +112,7 @@
 
     .cancel-button {
         width: 80px;
-        background: var(--border);
+        background: var(--primary-colour);
         color: #000000;
         margin-right: 10px;
         border: 1px solid var(--input-border);
@@ -184,7 +184,7 @@
         padding: 0px 0px 0px 10px;
         border: 1px solid var(--input-border);
         border-radius: 9px;
-        background: var(--border);
+        background: var(--primary-colour);
         font-weight: 500;
         font-size: 14px;
         font-family: 'DM Sans';
@@ -200,7 +200,7 @@
         width: 512px;
         border: 1px solid var(--input-border);
         border-radius: 9px;
-        background: var(--border);
+        background: var(--primary-colour);
         display: inline-flex;
         align-items: center;
 

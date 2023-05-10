@@ -28,9 +28,9 @@
             <div class="search-bar">
                 <div class="search-container">
                     <div class="search">
-                        <input type="text" placeholder="Search anything..." class="searchField">
+                        <input type="text" placeholder="Search anything..." class="search-field">
                         
-                        <img src="/Lupe.png" alt="Значёк поиска" class="searchIcon">
+                        <img src="/Lupe.png" alt="Lupe icon">
                     </div>
                 </div>
 

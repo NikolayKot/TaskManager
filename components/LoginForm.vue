@@ -4,19 +4,23 @@
 
         <h1 class="text">Log In</h1>
 
-        <label class="label-text">
-            Login
+        <div class="form-row">
+            <label class="label-text">
+                Login
 
-            <input :class="{active: isWrong}" type="text" placeholder="Fill in the login" v-model="login">
-        </label>
+                <input :class="{active: isWrong}" type="text" placeholder="Fill in the login" v-model="login">
+            </label>
+        </div>
         
-        <label class="label-text">
-            Password
-        
-            <input :class="{active: isWrong}" type="password" placeholder="Fill in the password" v-model="password">
-        </label>
+        <div class="form-row">
+            <label class="label-text">
+                Password
             
-        <div :class="{'wrong-input': isWrong}" class="visible">Password or username entered incorrectly.</div>
+                <input :class="{active: isWrong}" type="password" placeholder="Fill in the password" v-model="password">
+            </label>
+            
+            <div :class="{'wrong-input': isWrong}" class="visible">Password or username entered incorrectly.</div>
+        </div>
 
         <button @click="logIn" type="button">Log In</button>
     </form>

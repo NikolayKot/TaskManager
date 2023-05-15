@@ -1,16 +1,16 @@
 <template>
     <div class="profile-info">
-        <label>
-            Login
+        <div>
+            <label for="login">Login</label>
             
-            <input type="text" placeholder="Enter your login" v-model="login">
-        </label>
+            <input type="text" placeholder="Enter your login" v-model="login" id="login">
+        </div>
 
-        <label>
-            Password
-
+        <div>
+            <label>Password</label>
+            
             <input type="password" placeholder="Enter your password" v-model="password">
-        </label>
+        </div>
 
         <div class="buttons">
             <button class="cancel-button">Cancel</button>

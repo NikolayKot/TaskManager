@@ -1,37 +1,37 @@
 <template>
     <div class="profile-info">
         <div class="full-name">
-            <label>
-                First name
+            <div class="name">
+                <label for="first-name">First name</label>
                 
-                <input type="text" placeholder="Enter your first name" v-model="name">
-            </label>
+                <input type="text" placeholder="Enter your first name" v-model="name" id="first-name">
+            </div>
 
-            <label>
-                Last name
+            <div class="name">
+                <label for="last-name">Last name</label>
 
-                <input type="text" placeholder="Enter your last name" v-model="surname">
-            </label>
+                <input type="text" placeholder="Enter your last name" v-model="surname" id="last-name">
+            </div>
         </div>
 
         <div class="email-field">
-            <label>
-                Email
-
-                <div class="email">
+            <div class="email-container">
+                <label for="email-input">Email</label>
+                
+                <div class="email" id="email-input">
                     <img src="/email.png" alt="Значёк email" class="searchIcon">
 
                     <input type="text" placeholder="Enter your email" v-model="email">
                 </div>
-            </label>
+            </div>
             
-            <label>
-                Role
-
-                <div class="email">
+            <div class="email-container">
+                <label for="role">Role</label>
+                
+                <div class="email" id="role">
                     <input type="text" placeholder="Enter your role" v-model="role">
                 </div>
-            </label>
+            </div>
         </div>
 
         <div class="buttons">

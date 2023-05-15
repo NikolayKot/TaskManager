@@ -4,7 +4,8 @@
             <img src="/profileBackground.png" alt="Background Profile picture">
             
             <div class="avatar-zone">
-                <img :src="imageUrl" alt="User avatar"
+                <img :src="imageUrl" 
+                    alt="User avatar"
                     v-if="imageUrl"
                     class="avatar"
                 >

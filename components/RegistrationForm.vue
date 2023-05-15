@@ -4,26 +4,32 @@
 
         <h1 class="text">Sign Up</h1>
 
- 
-        <label class="label-text">
-            Login
+        <div class="form-row">
             
-            <input :class="{active: isWrong}" type="text" placeholder="Fill in the login" v-model="login">
-        </label>
+            <label class="label-text">
+                Login
+                
+                <input :class="{active: isWrong}" type="text" placeholder="Fill in the login" v-model="login">
+            </label>
+        </div>
 
-        <label class="label-text">
-            Password
+        <div class="form-row">
+            <label class="label-text">
+                Password
 
-            <input :class="{active: isWrong}" type="password" placeholder="Fill in the password" v-model="password">
-        </label>
+                <input :class="{active: isWrong}" type="password" placeholder="Fill in the password" v-model="password">
+            </label>
+        </div>
 
-        <label class="label-text">
-            Repeat the password
+        <div class="form-row">
+            <label class="label-text">
+                Repeat the password
 
-            <input :class="{active: isWrong}" type="password" placeholder="Fill in the password again" v-model="repeatPassword">
-        </label>
-        
-        <div :class="{'wrong-input': isWrong}" class="visible">Passwords do not match, check the correctness of the input.</div>
+                <input :class="{active: isWrong}" type="password" placeholder="Fill in the password again" v-model="repeatPassword">
+            </label>
+            
+            <div :class="{'wrong-input': isWrong}" class="visible">Passwords do not match, check the correctness of the input.</div>
+        </div>
 
         <button type="button" @click="register">Sign Up</button>
     </form>

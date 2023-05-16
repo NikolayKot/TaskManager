@@ -1,0 +1,48 @@
+.full-name {
+    margin-top: 20px;
+    display: flex;
+    
+    .name {
+        display: flex;
+        flex-direction: column;
+        margin-right: 24px;
+
+        input {
+            width: 308px;
+            height: 45px;
+        }
+    }
+}
+
+.email {
+    height: 45px;
+    width: 512px;
+    border: 1px solid var(--input-border-colour);
+    border-radius: 9px;
+    background: var(--primary-colour);
+    display: inline-flex;
+    align-items: center;
+
+    img {
+        width: 17px;
+        height: 14px;
+        margin: 15px 0px 16px 16px;
+    }
+    
+    input {
+        width: 468px;
+        border-radius: 9px;
+        border: 0px;
+        height: 18px;
+        padding: 14px 0px 14px 20px;
+    }
+    
+}
+
+.email-field {
+    margin-top: 55px;
+
+    label {
+        margin-top: 15px;
+    }
+}

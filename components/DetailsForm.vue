@@ -29,7 +29,7 @@
                 <label for="role">Role</label>
                 
                 <div class="email" id="role">
-                    <input type="text" placeholder="Enter your role" v-model="role">
+                    <input type="text" placeholder="Enter your role" v-model="role" class="aaa">
                 </div>
             </div>
         </div>
@@ -76,3 +76,5 @@
         }
     }
 </script>
+
+<style src="~/assets/detailsForm.scss"></style>

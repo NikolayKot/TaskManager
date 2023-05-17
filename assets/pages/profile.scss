@@ -49,7 +49,7 @@ input {
             border-radius: 100%;            
         }
 
-        label {
+        .avatar-label {
             position: absolute;
             display: flex;
             align-items: center;
@@ -104,7 +104,9 @@ input {
 .buttons {
     margin-top: 40px;
 
-    button {
+
+    .save-button,
+    .cancel-button {
         color: var(--border-colour);
         background-color: var(--accent-colour);
         width: 64px;
@@ -164,7 +166,12 @@ input {
 .profile-info {
     padding-left: 60px;
 
-    label {
+    .login-label,
+    .password-label,
+    .first-name-label,
+    .last-name-label,
+    .email-label,
+    .role-label {
         margin-top: 15px;
         font-family: 'DM Sans';
         font-style: normal;

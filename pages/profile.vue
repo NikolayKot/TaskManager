@@ -10,7 +10,7 @@
                     class="avatar"
                 >
 
-                <label :class="{active: imageUrl}" for="upload-photo">Change Avatar</label>   
+                <label :class="{active: imageUrl}" for="upload-photo" class="avatar-label">Change Avatar</label>   
                 <input type="file" 
                     ref="input"
                     id="upload-photo"
@@ -66,7 +66,7 @@
             }
         },
         beforeMount() {
-            if (localStorage.login == undefined || localStorage.login == ' ') {
+            if (localStorage.login == undefined || localStorage.login == ' ' || localStorage.login == '') {
                 window.location.href = '/'
             }
         }

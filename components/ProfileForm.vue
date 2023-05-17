@@ -1,21 +1,21 @@
 <template>
     <div class="profile-info">
         <div>
-            <label for="login">Login</label>
+            <label for="login-input" class="login-label">Login</label>
             
-            <input type="text" placeholder="Enter your login" v-model="login" id="login">
+            <input type="text" placeholder="Enter your login" v-model="login" id="login-input">
         </div>
 
         <div>
-            <label>Password</label>
+            <label for="password-input" class="password-label">Password</label>
             
-            <input type="password" placeholder="Enter your password" v-model="password">
+            <input type="password" placeholder="Enter your password" v-model="password" id="password-input">
         </div>
 
         <div class="buttons">
             <button class="cancel-button">Cancel</button>
             
-            <button @click="save">Save</button>
+            <button @click="save" class="save-button">Save</button>
         </div>
     </div>
 </template>

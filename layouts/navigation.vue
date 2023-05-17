@@ -1,30 +1,30 @@
 <template>
     <div class="container">
         <div class="nav-bar">
-            <img src="/logo.png" alt="Application logo">
+            <img src="/logo.png" alt="Application logo" class="application-logo">
 
             <ul class="navigation-icons">
-                <li :class="{active: profileActive}">
-                    <img src="/settings.svg" alt="Settings icon" class="pic">
+                <li :class="{active: profileActive}" class="navigation-icon">
+                    <img src="/settings.svg" alt="Settings icon" class="nevigation-icon-picture">
                 </li>
 
-                <li :class="{active: messageActive}">
-                    <img src="/message.svg" alt="Message icon" class="pic">
+                <li :class="{active: messageActive}" class="navigation-icon">
+                    <img src="/message.svg" alt="Message icon" class="nevigation-icon-picture">
                 </li>
 
-                <li :class="{active: tasksActive}">
-                    <img src="/tasks.svg" alt="Tasks icon" class="pic">
+                <li :class="{active: tasksActive}" class="navigation-icon">
+                    <img src="/tasks.svg" alt="Tasks icon" class="nevigation-icon-picture">
                 </li>
             </ul>
         </div>
-
+ 
         <div class="content">
             <div class="search-bar">
                 <div class="search-container">
                     <div class="search">
                         <input type="text" placeholder="Search anything..." class="search-field">
                         
-                        <img src="/lupe.png" alt="Lupe icon">
+                        <img src="/lupe.png" alt="Lupe icon" class="lupe-icon">
                     </div>
                 </div>
 

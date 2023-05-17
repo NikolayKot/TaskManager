@@ -3,13 +3,13 @@
         <div>
             <label for="login-input" class="login-label">Login</label>
             
-            <input type="text" placeholder="Enter your login" v-model="login" id="login-input">
+            <input type="text" placeholder="Enter your login" v-model="login" id="login-input" class="login-input">
         </div>
 
         <div>
             <label for="password-input" class="password-label">Password</label>
             
-            <input type="password" placeholder="Enter your password" v-model="password" id="password-input">
+            <input type="password" placeholder="Enter your password" v-model="password" id="password-input" class="password-input">
         </div>
 
         <div class="buttons">

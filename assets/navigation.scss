@@ -35,11 +35,11 @@
                     color: var(--text-colour);
                 }
                 
-                input {
+                .search-field {
                     padding: 13px 0px 13px 20px;
                 }
 
-                img {
+                .lupe-icon {
                     margin: 12px 20px 12px 0px;
                 }
                 
@@ -134,7 +134,7 @@
     height: 100vh;
     background-color: var(--main-colour);
 
-    img {
+    .application-logo {
         margin: 20px 15px 139px 15px;
     }
 }
@@ -147,13 +147,13 @@
     align-items: center;
     flex-direction: column;
 
-    img {
+    .nevigation-icon-picture {
         width: 20px;
         height: 20px;
         margin: 0;
     }    
 
-    li {
+    .navigation-icon {
         width: 46px;
         height: 45px;
         border-radius: 14px;
@@ -170,7 +170,7 @@
     .active {
         background-color: var(--accent-colour);
 
-        .pic {
+        .nevigation-icon-picture {
             filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(250%) contrast(100%);
         }
     }

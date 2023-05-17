@@ -1,7 +1,7 @@
 <template>
     <div class="content-container">
         <div class="settings-container">
-            <img src="/profileBackground.png" alt="Background Profile picture">
+            <img src="/profileBackground.png" alt="Background Profile picture" class="background-picture">
             
             <div class="avatar-zone">
                 <img :src="imageUrl" 
@@ -14,18 +14,19 @@
                 <input type="file" 
                     ref="input"
                     id="upload-photo"
+                    class="avatar-input"
                 >       
             </div>
 
             <div class="block-of-changes">
-                <h1>Settings</h1>
+                <h1 class="settings-caption">Settings</h1>
             </div>
         </div>
 
         <div class="user-information">
-            <ul>
-                <li :class="{active: detailsForm}" @click="transformDetails">My details</li>
-                <li :class="{active: profileForm}" @click="transformProfile">Profile</li>
+            <ul class="user-list">
+                <li :class="{active: detailsForm}" @click="transformDetails" class="user-details">My details</li>
+                <li :class="{active: profileForm}" @click="transformProfile" class="user-details">Profile</li>
             </ul>
         </div>
 

@@ -4,13 +4,13 @@
             <div class="name">
                 <label for="first-name-input" class="first-name-label">First name</label>
                 
-                <input type="text" placeholder="Enter your first name" v-model="name" id="first-name-input">
+                <input type="text" placeholder="Enter your first name" v-model="name" id="first-name-input" class="full-name-input">
             </div>
 
             <div class="name">
                 <label for="last-name-input" class="last-name-label">Last name</label>
 
-                <input type="text" placeholder="Enter your last name" v-model="surname" id="last-name-input">
+                <input type="text" placeholder="Enter your last name" v-model="surname" id="last-name-input" class="full-name-input">
             </div>
         </div>
 
@@ -19,9 +19,9 @@
                 <label for="email" class="email-label">Email</label>
                 
                 <div class="email" id="email">
-                    <img src="/email.png" alt="Значёк email" class="searchIcon">
+                    <img src="/email.png" alt="Значёк email" class="search-icon">
 
-                    <input type="text" placeholder="Enter your email" v-model="email">
+                    <input type="text" placeholder="Enter your email" v-model="email" class="email-input">
                 </div>
             </div>
             
@@ -29,7 +29,7 @@
                 <label for="role" class="role-label">Role</label>
                 
                 <div class="email" id="role">
-                    <input type="text" placeholder="Enter your role" v-model="role">
+                    <input type="text" placeholder="Enter your role" v-model="role" class="role-input">
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="nav-bar">
+        <div :class="{'nav-bar-active': burgerActive}" class="nav-bar">
             <img src="/logo.png" alt="Application logo" class="application-logo">
 
             <ul class="navigation-icons">
@@ -20,6 +20,12 @@
  
         <div class="content">
             <div class="search-bar">
+                <div @click="activatingTheMenu" class="burger-menu">
+                    <div :class="{'burger-wand-top': burgerActive}" class="burger-wand"></div>
+                    <div :class="{'burger-wand-middle': burgerActive}" class="burger-wand"></div>
+                    <div :class="{'burger-wand-bottom': burgerActive}" class="burger-wand"></div>
+                </div>
+
                 <div class="search-container">
                     <div class="search">
                         <input type="text" placeholder="Search anything..." class="search-field">
@@ -43,7 +49,6 @@
         </div>
     </div>
 </template>
-
 <style src="~/assets/navigation.scss"></style>
 
 <script>
@@ -55,6 +60,7 @@
                 tasksActive: false,
                 rotation: false,
                 rotateWand: false,
+                burgerActive: false,
             }
         },
         methods: {
@@ -65,6 +71,9 @@
             logout() {
                 localStorage.clear();
                 window.location.href = '/'
+            },
+            activatingTheMenu() {
+                this.burgerActive  =! this.burgerActive
             }
         },
         mounted() {

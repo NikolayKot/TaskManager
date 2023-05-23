@@ -2,21 +2,21 @@
     <div class="profile-info">
         <div class="full-name">
             <div class="name">
-                <label for="first-name-input" class="first-name-label">First name</label>
+                <label for="first-name-input" class="field-lable">First name</label>
                 
-                <input type="text" placeholder="Enter your first name" v-model="name" id="first-name-input" class="full-name-input">
+                <input type="text" placeholder="Enter your first name" v-model="name" id="first-name-input" class="field-input">
             </div>
 
             <div class="name">
-                <label for="last-name-input" class="last-name-label">Last name</label>
+                <label for="last-name-input" class="field-lable">Last name</label>
 
-                <input type="text" placeholder="Enter your last name" v-model="surname" id="last-name-input" class="full-name-input">
+                <input type="text" placeholder="Enter your last name" v-model="surname" id="last-name-input" class="field-input">
             </div>
         </div>
 
         <div class="email-field">
             <div class="email-container">
-                <label for="email" class="email-label">Email</label>
+                <label for="email" class="field-lable email-label">Email</label>
                 
                 <div class="email" id="email">
                     <img src="/email.png" alt="Значёк email" class="search-icon">
@@ -26,10 +26,10 @@
             </div>
             
             <div class="email-container">
-                <label for="role" class="role-label">Role</label>
+                <label for="role" class="field-lable email-label">Role</label>
                 
                 <div class="email" id="role">
-                    <input type="text" placeholder="Enter your role" v-model="role" class="role-input">
+                    <input type="text" placeholder="Enter your role" v-model="role" class="email-input">
                 </div>
             </div>
         </div>
@@ -41,6 +41,7 @@
         </div>
     </div>
 </template>
+<style src="~/assets/components/detailsForm.scss"></style>
 
 <script>
     export default {
@@ -76,5 +77,3 @@
         }
     }
 </script>
-
-<style src="~/assets/components/detailsForm.scss"></style>

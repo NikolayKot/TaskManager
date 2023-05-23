@@ -47,12 +47,12 @@
         },
         methods: {
             register() {
-                if (this.password != this.repeatPassword || this.login == '') {
+                if (this.password != this.repeatPassword || this.login.trim() == '' || this.password.trim() == '') {
                     this.isWrong = true;
                     return;
                 } 
-                localStorage.login = this.login;
-                localStorage.password = this.password;
+                localStorage.login = this.login.trim();
+                localStorage.password = this.password.trim();
                 this.isWrong = false;
                 window.location.href = '/profile';
             }

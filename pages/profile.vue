@@ -34,7 +34,6 @@
         <ProfileForm v-else/>
     </div>
 </template>
-
 <style src="~/assets/pages/profile.scss"></style>
 
 <script>
@@ -67,7 +66,7 @@
             }
         },
         beforeMount() {
-            if (localStorage.login == undefined || localStorage.login == ' ' || localStorage.login == '') {
+            if (localStorage.login.trim() == '') {
                 window.location.href = '/'
             }
         }

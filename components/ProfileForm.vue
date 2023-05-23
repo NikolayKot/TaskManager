@@ -1,15 +1,15 @@
 <template>
     <div class="profile-info">
         <div>
-            <label for="login-input" class="login-label">Login</label>
+            <label for="login-input" class="field-lable">Login</label>
             
-            <input type="text" placeholder="Enter your login" v-model="login" id="login-input" class="login-input">
+            <input type="text" placeholder="Enter your login" v-model="login" id="login-input" class="field-input">
         </div>
 
         <div>
-            <label for="password-input" class="password-label">Password</label>
+            <label for="password-input" class="field-lable">Password</label>
             
-            <input type="password" placeholder="Enter your password" v-model="password" id="password-input" class="password-input">
+            <input type="password" placeholder="Enter your password" v-model="password" id="password-input" class="field-input">
         </div>
 
         <div class="buttons">

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .content {
     width: 100%;
     height: 100vh;
@@ -12,13 +16,14 @@
         justify-content: flex-end;
 
         .search-container {
-            width: 100%;
+            margin: auto;
+            width: 290px;
             display: flex;
             align-items: center;
             justify-content: center;
 
             .search {
-                width: 290px;
+                width: 100%;
                 height: 44px;
                 background: #F3F7FA;
                 border-radius: 7px;
@@ -48,7 +53,7 @@
                 }
                 
                 .search-field {
-                    width: 248px;
+                    width: 100%;
                     height: 18px;
                     background: #F3F7FA;
                     border-radius: 7px;
@@ -95,7 +100,6 @@
             }
         }
 
-
         .exit-container {
             visibility: hidden;
             margin: 65px 30px 0px 0px;
@@ -118,8 +122,7 @@
                 
                 &:hover {
                     cursor: pointer;
-                }
-                
+                } 
             }
         }
 
@@ -173,5 +176,75 @@
         .nevigation-icon-picture {
             filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(250%) contrast(100%);
         }
+    }
+}
+
+.burger-menu {
+    width: 30px;
+    height: 25px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    .burger-wand {
+        width: 25px;
+        height: 3px;
+        background: var(--accent-colour);
+        transition: 0.5s;
+    }
+
+    .burger-wand-top {
+        transform: rotate(45deg);
+        position: absolute;
+    }
+
+    .burger-wand-bottom {
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+
+    .burger-wand-middle {
+        display: none;
+    }
+}
+
+@media (min-width:501px) {
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media (max-width:500px) {
+    .application-logo {
+        display: none;
+    }
+
+    .nav-bar {
+        z-index: -1;
+        position: absolute;
+        width: 100px;
+        height: 220px;
+        border-radius: 10%;
+        margin-top: 76px;
+        transition: 0.2s;
+    }
+
+    .search-container {
+        padding-left: 10px;
+    }
+
+    .navigation-icon {
+        margin-top: 10px;
+    }
+
+    .container {
+        justify-content: start;
+        align-items: start;
+    }
+    
+    .nav-bar-active {
+        z-index: 1;
     }
 }

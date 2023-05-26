@@ -13,7 +13,7 @@
         </div>
 
         <div class="buttons">
-            <button class="cancel-button">Cancel</button>
+            <button class="cancel-button save-button">Cancel</button>
             
             <button @click="save" class="save-button">Save</button>
         </div>

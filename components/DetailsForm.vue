@@ -21,7 +21,7 @@
                 <div class="email" id="email">
                     <img src="/email.png" alt="Значёк email" class="search-icon">
 
-                    <input type="text" placeholder="Enter your email" v-model="email" class="email-input">
+                    <input type="text" placeholder="Enter your email" v-model="email" class="field-input">
                 </div>
             </div>
             
@@ -29,13 +29,13 @@
                 <label for="role" class="field-lable email-label">Role</label>
                 
                 <div class="email" id="role">
-                    <input type="text" placeholder="Enter your role" v-model="role" class="email-input">
+                    <input type="text" placeholder="Enter your role" v-model="role" class="field-input">
                 </div>
             </div>
         </div>
 
         <div class="buttons">
-            <button class="cancel-button">Cancel</button>
+            <button class="cancel-button save-button">Cancel</button>
             
             <button @click="save" class="save-button">Save</button>
         </div>

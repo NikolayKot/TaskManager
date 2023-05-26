@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 
-.field-input,
-.email-input {
+.field-input{
     width: 308px;
     height: 45px;
     padding: 0px 0px 0px 10px;
@@ -102,8 +101,7 @@
 .buttons {
     margin-top: 40px;
 
-    .save-button,
-    .cancel-button {
+    .save-button {
         color: var(--border-colour);
         background-color: var(--accent-colour);
         width: 64px;
@@ -187,16 +185,15 @@
 }
 
 @media (max-width:768px) {
-    .email {
+    .name {
         width: 308px;
     }
 }
 
 @media (max-width:560px) {
     .field-input,
-    .email-input,
-    .email,
-    .name {
+    .name,
+    .email {
         width: 208px;
     }
 }

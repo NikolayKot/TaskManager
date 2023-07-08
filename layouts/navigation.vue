@@ -4,7 +4,7 @@
             <img src="/logo.png" alt="Application logo" class="application-logo">
 
             <ul class="navigation-icons">
-                <li :class="{active: profileActive}" class="navigation-icon">
+                <li :class="{active: profileActive}" class="navigation-icon" @click="goToProfile">
                     <img src="/settings.svg" alt="Settings icon" class="nevigation-icon-picture">
                 </li>
 
@@ -12,7 +12,7 @@
                     <img src="/message.svg" alt="Message icon" class="nevigation-icon-picture">
                 </li>
 
-                <li :class="{active: tasksActive}" class="navigation-icon">
+                <li :class="{active: tasksActive}" class="navigation-icon" @click="goToTasks">
                     <img src="/tasks.svg" alt="Tasks icon" class="nevigation-icon-picture">
                 </li>
             </ul>
@@ -74,6 +74,12 @@
             },
             activatingTheMenu() {
                 this.burgerActive  =! this.burgerActive
+            },
+            goToTasks() {
+                window.location.href = '/tasks'
+            },
+            goToProfile() {
+                window.location.href = '/profile'
             }
         },
         mounted() {

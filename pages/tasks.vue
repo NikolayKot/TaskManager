@@ -7,7 +7,7 @@
         </header>
 
         <div class="new-tasks">
-            <div>
+            <div class="new-tasks__container">
                 <div class="new-tasks__creater">
                     Backlog
     
@@ -33,7 +33,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="new-tasks__container">
                 <div class="new-tasks__creater">
                     To do
     
@@ -59,7 +59,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="new-tasks__container">
                 <div class="new-tasks__creater">
                     In progress
     
@@ -85,7 +85,7 @@
                 </ul>
             </div>
             
-            <div>
+            <div class="new-tasks__container">
                 <div class="new-tasks__creater">
                     Tasks review
     

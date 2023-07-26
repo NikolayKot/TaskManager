@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.field-input{
+.field-input {
     width: 308px;
     height: 45px;
     padding: 0px 0px 0px 10px;
@@ -16,7 +16,6 @@
 }
 
 .content-container {
-    margin: 30px 30px 0px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -202,6 +201,7 @@
     .block-of-changes {
         padding-left: 217px;
     }
+
     .avatar-zone {
         margin: 234px 0px 0px 50px;
     }

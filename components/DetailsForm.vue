@@ -1,13 +1,13 @@
 <template>
     <div class="profile-info">
         <div class="full-name">
-            <div class="name">
+            <div class="full-name__input-container">
                 <label for="first-name-input" class="field-lable">First name</label>
                 
                 <input type="text" placeholder="Enter your first name" v-model="name" id="first-name-input" class="field-input">
             </div>
 
-            <div class="name">
+            <div class="full-name__input-container">
                 <label for="last-name-input" class="field-lable">Last name</label>
 
                 <input type="text" placeholder="Enter your last name" v-model="surname" id="last-name-input" class="field-input">
@@ -16,7 +16,7 @@
 
         <div class="email-field">
             <div class="email-container">
-                <label for="email" class="field-lable email-label">Email</label>
+                <label for="email" class="field-lable email-field__label">Email</label>
                 
                 <div class="email" id="email">
                     <img src="/email.png" alt="Значёк email" class="search-icon">
@@ -26,7 +26,7 @@
             </div>
             
             <div class="email-container">
-                <label for="role" class="field-lable email-label">Role</label>
+                <label for="role" class="field-lable email-field__label">Role</label>
                 
                 <div class="email" id="role">
                     <input type="text" placeholder="Enter your role" v-model="role" class="field-input">

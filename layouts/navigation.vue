@@ -1,18 +1,18 @@
 <template>
     <div class="container">
-        <div :class="{'nav-bar-active': burgerActive}" class="nav-bar">
+        <div :class="{'nav-bar-active': isBurgerActive}" class="nav-bar">
             <img src="/logo.png" alt="Application logo" class="application-logo">
 
             <ul class="navigation-icons">
-                <li :class="{active: profileActive}" class="navigation-icon" @click="goToProfile">
+                <li :class="{active: windowLocation == '/profile'}" class="navigation-icon" @click="goToProfile">
                     <img src="/settings.svg" alt="Settings icon" class="nevigation-icon-picture">
                 </li>
 
-                <li :class="{active: messageActive}" class="navigation-icon">
+                <li :class="{active: windowLocation == '/message'}" class="navigation-icon">
                     <img src="/message.svg" alt="Message icon" class="nevigation-icon-picture">
                 </li>
 
-                <li :class="{active: tasksActive}" class="navigation-icon" @click="goToTasks">
+                <li :class="{active: windowLocation == '/tasks'}" class="navigation-icon" @click="goToTasks">
                     <img src="/tasks.svg" alt="Tasks icon" class="nevigation-icon-picture">
                 </li>
             </ul>
@@ -20,10 +20,10 @@
  
         <div class="content">
             <div class="search-bar">
-                <div @click="activatingTheMenu" class="burger-menu">
-                    <div :class="{'burger-wand-top': burgerActive}" class="burger-wand"></div>
-                    <div :class="{'burger-wand-middle': burgerActive}" class="burger-wand"></div>
-                    <div :class="{'burger-wand-bottom': burgerActive}" class="burger-wand"></div>
+                <div @click="interactBurgerMenu" class="burger-menu">
+                    <div :class="{'burger-wand-top': isBurgerActive}" class="burger-wand"></div>
+                    <div :class="{'burger-wand-middle': isBurgerActive}" class="burger-wand"></div>
+                    <div :class="{'burger-wand-bottom': isBurgerActive}" class="burger-wand"></div>
                 </div>
 
                 <div class="search-container">
@@ -34,13 +34,13 @@
                     </div>
                 </div>
 
-                <div @click="quit" class="exit">
-                    <div :class="{active: rotation}" class="wand"></div>
+                <div @click="showLogoutButton" class="exit">
+                    <div :class="{active: isRotating}" class="wand"></div>
                     
-                    <div :class="{'active-wand' : rotateWand}" class="wand exit-wand"></div>
+                    <div :class="{'active-wand' : isRotating}" class="wand exit-wand"></div>
                 </div>
 
-                <div :class="{'exit-button-active': rotation}" class="exit-container">
+                <div :class="{'exit-button-active': isRotating}" class="exit-container">
                     <div class="exit-text" @click="logout">Log Out</div>
                 </div>
             </div>
@@ -55,25 +55,21 @@
     export default {
         data: () => {
             return {
-                profileActive: false,
-                messageActive: false,
-                tasksActive: false,
-                rotation: false,
-                rotateWand: false,
-                burgerActive: false,
+                windowLocation: '',
+                isRotating: false,
+                isBurgerActive: false,
             }
         },
         methods: {
-            quit() {
-                this.rotation  =! this.rotation
-                this.rotateWand  =! this.rotateWand
+            showLogoutButton() {
+                this.isRotating  =! this.isRotating
             },
             logout() {
                 localStorage.clear();
                 window.location.href = '/'
             },
-            activatingTheMenu() {
-                this.burgerActive  =! this.burgerActive
+            interactBurgerMenu() {
+                this.isBurgerActive  =! this.isBurgerActive
             },
             goToTasks() {
                 window.location.href = '/tasks'
@@ -83,20 +79,7 @@
             }
         },
         mounted() {
-            if (window.location.pathname == '/profile'){
-                this.profileActive = true
-            }
-            else if (window.location.pathname == '/tasks'){
-                this.tasksActive = true
-            }
-            else if (window.location.pathname == '/message'){
-                this.messageActive = true
-            }
-            else {
-                this.profileActive = false
-                this.tasksActive = false
-                this.messageActive = false
-            };
+            this.windowLocation = window.location.pathname
         },
     }
 </script>

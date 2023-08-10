@@ -1,5 +1,5 @@
 <template>
-    <div v-if="show" class="modal-shadow" @click.self="closeModal">
+    <div v-if="isModalWindowActive" class="modal-shadow" @click.self="closeModal">
         <div class="modal-window">
             <header class="header">
                 <h1 class="header__title">New task</h1>
@@ -54,14 +54,16 @@
 
 <style src="@/assets/components/modal-window.scss"></style>
 
-<script>  
+<script>
+    import TaskApi from '~/mixins/TaskApi.js'
+
     export default {
-        name: "ModalWindow",
-        data() {
+        mixins: [TaskApi], 
+        data: () => {
             return {
                 isWrong: false,
                 sectionId: 0,
-                show: false,
+                isModalWindowActive: false,
                 form: {
                     tag: '',
                     title: '',
@@ -71,36 +73,8 @@
         },
         methods: {
             closeModal() {
-                this.show = false
+                this.isModalWindowActive = false
             },
-
-            async createTask() {
-                if (this.form.title.trim() == '' || this.form.description.trim() == '') {
-                    this.isWrong = true;
-                    return
-                }
-                else {
-                    try {
-                        const res = await fetch('http://localhost:5000/tasks', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type' : 'application/json;charset=utf-8'
-                            },
-                            body: JSON.stringify ({
-                                title: this.form.title,
-                                description: this.form.description,
-                                tag: this.form.tag,
-                                sectionId: this.sectionId
-                            })
-                        })
-                        
-                        location.reload()
-                    } catch (error) {
-                        console.log(error)
-                    }
-                    this.isWrong = false;
-                }
-            }
         }
     }
 </script>

@@ -25,12 +25,12 @@
 
         <div class="user-information">
             <ul class="user-list">
-                <li :class="{active: detailsForm}" @click="transformDetails" class="user-details">My details</li>
-                <li :class="{active: profileForm}" @click="transformProfile" class="user-details">Profile</li>
+                <li :class="{active: isDetailsFormActive}" @click="transformDetails" class="user-details">My details</li>
+                <li :class="{active: isProfileFormActive}" @click="transformProfile" class="user-details">Profile</li>
             </ul>
         </div>
 
-        <DetailsForm v-if="detailsForm"/>
+        <DetailsForm v-if="isDetailsFormActive"/>
         <ProfileForm v-else/>
     </div>
 </template>
@@ -51,18 +51,18 @@
         },
         data: () => {
             return {
-                detailsForm: true,
-                profileForm: false,
+                isDetailsFormActive: true,
+                isProfileFormActive: false,
             }
         },
         methods: {
             transformDetails() {
-                this.detailsForm  = true
-                this.profileForm = false
+                this.isDetailsFormActive  = true
+                this.isProfileFormActive = false
             },
             transformProfile() {
-                this.detailsForm  = false
-                this.profileForm = true
+                this.isDetailsFormActive  = false
+                this.isProfileFormActive = true
             }
         },
         beforeMount() {

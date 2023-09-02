@@ -183,34 +183,10 @@
 }
 
 .burger-menu {
+    padding: 0px;
     width: 30px;
     height: 25px;
     margin-left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-
-    .burger-wand {
-        width: 25px;
-        height: 3px;
-        background: var(--accent-colour);
-        transition: 0.5s;
-    }
-
-    .burger-wand-top {
-        transform: rotate(45deg);
-        position: absolute;
-    }
-
-    .burger-wand-bottom {
-        transform: rotate(-45deg);
-        position: absolute;
-    }
-
-    .burger-wand-middle {
-        display: none;
-    }
 }
 
 @media (min-width:501px) {
@@ -232,10 +208,9 @@
         z-index: -1;
         position: absolute;
         width: 100px;
-        height: 220px;
+        height: 14%;
         border-radius: 10%;
         margin-top: 76px;
-        transition: 0.2s;
     }
 
     .search-container {

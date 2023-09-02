@@ -4,18 +4,12 @@
         <div class="new-tasks__creater">
             {{categotyName}}
 
-            <img @click="showModal(); catchId()" src="/new-tasks.png" alt="Image to create new task" class="new-tasks__image">
+            <img @click="showModal" src="/new-tasks.png" alt="Image to create new task" class="new-tasks__image">
         </div>
 
         <ul class="new-tasks__task-list">
             <li v-for="task in tasksList" :key="task.id" v-show="task.sectionId  === section" class="new-tasks__task-box"> 
-                <div v-if="task.tag === 'Design'" class="new-tasks__design-tag__color new-tasks__tags">{{ task.tag }}</div>
-                
-                <div v-if="task.tag === 'Planning'" class="new-tasks__planning-tag__color new-tasks__tags">{{ task.tag }}</div>
-                
-                <div v-if="task.tag === 'Research'" class="new-tasks__research-tag__color new-tasks__tags">{{ task.tag }}</div>
-                
-                <div v-if="task.tag === 'Content'" class="new-tasks__content-tag__color new-tasks__tags">{{ task.tag }}</div>
+                <div :class="[`new-tasks__${task.tag.toLowerCase()}-tag__color`, 'new-tasks__tags']">{{ task.tag }}</div>
                 
                 <div class="new-tasks__task-title">{{ task.title }}</div>
                 
@@ -34,7 +28,6 @@
     import ModalWindow from '@/components/ModalWindow.vue'
 
     export default {
-        name: 'App',
         data: () => {
             return {
                 tasksList: [],
@@ -49,13 +42,14 @@
             categotyName: "String",
         },
         methods: {
-            createDate: (date) => {
-                return `${new Date (date).toLocaleString('en-US', { month: 'short' })} ${new Date(date).getDate()}, ${new Date(date).getFullYear()}`
+            createDate(date) {
+                let month = new Date (date).toLocaleString('en-US', { month: 'short' })
+                let day = new Date(date).getDate()
+                let year = new Date(date).getFullYear()
+                return `${month} ${day}, ${year}`
             },
-            showModal: function () {
+            showModal() {
                 this.$refs.modal.isModalWindowActive = true
-            },
-            catchId() {
                 this.$refs.modal.sectionId = this.section;
             }
         },

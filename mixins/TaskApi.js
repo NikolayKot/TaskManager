@@ -2,7 +2,7 @@ export default {
     name: "ModalWindow",
     methods: {
         async createTask() {
-            if (this.form.title.trim() == '' || this.form.description.trim() == '') {
+            if (this.isRequiredFieldsEmpty) {
                 this.isWrong = true;
                 return
             }
@@ -27,6 +27,16 @@ export default {
                     alert(`An error occurred while creating the task: ${error}`);
                 }
                 this.isWrong = false;
+            }
+        }
+    },
+    computed: {
+        isRequiredFieldsEmpty() {
+            if (this.form.title.trim() == '') {
+                return true
+            }
+            else if (this.form.description.trim() == '') {
+                return true
             }
         }
     }

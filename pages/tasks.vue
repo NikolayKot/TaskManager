@@ -7,13 +7,7 @@
         </header>
 
         <div class="new-tasks">
-            <TaskBlock v-bind="{ section: 1 , categotyName: 'Backlog'}"/>
-
-            <TaskBlock v-bind="{ section: 2 , categotyName: 'To do'}"/>
-
-            <TaskBlock v-bind="{ section: 3 , categotyName: 'In progress'}"/>
-
-            <TaskBlock v-bind="{ section: 4 , categotyName: 'Tasks review'}"/>
+            <TaskBlock v-for="taskCategory in tasksCategories" :key="taskCategory" v-bind="{ section: taskCategory.section , categotyName: taskCategory.categotyName}"/>
         </div>
     </div>
 </template>
@@ -28,9 +22,17 @@
     });
  
     export default {
-        name: 'App',
         components: {
             TaskBlock
         }
     }
+</script>
+
+<script setup>
+    const tasksCategories = [
+        { section: 1 , categotyName: 'Backlog'},
+        { section: 2 , categotyName: 'To do'},
+        { section: 3 , categotyName: 'In progress'},
+        { section: 4 , categotyName: 'Tasks review'}
+    ]
 </script>

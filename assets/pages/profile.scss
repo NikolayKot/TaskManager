@@ -144,6 +144,9 @@
             font-size: 14px;
             line-height: 18px;
             color: var(--input-placeholder-colour);
+            background-color: var(--primary-colour);
+            border: 0px;
+            padding: 0px;
             
             &:hover {
                 cursor: pointer;
@@ -158,7 +161,6 @@
 }
 
 .profile-info {
-    padding-left: 60px;
 
     .field-lable {
         margin-top: 15px;

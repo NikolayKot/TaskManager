@@ -10,28 +10,12 @@
             <form class="body">
                 <div class="body__content">
                     <div class="body__tags">
-                        <div class="body__tags-container body__tags-container__design-color">
-                            <input class="body__tags-input" type="radio" id="tag__design"
-                            name="tag" value="Design" v-model="form.tag">
-                            <label for="tag__design" class="body_tags-label">Design</label>
-                        </div>
-
-                        <div class="body__tags-container body__tags-container__research-color">
-                            <input class="body__tags-input" type="radio" id="tag__research"
-                            name="tag" value="Research" v-model="form.tag">
-                            <label for="tag__research" class="body_tags-label">Research</label>
-                        </div>
-
-                        <div class="body__tags-container body__tags-container__planning-color">
-                            <input class="body__tags-input" type="radio" id="tag__planning"
-                            name="tag" value="Planning" v-model="form.tag">
-                            <label for="tag__planning" class="body_tags-label">Planning</label>
-                        </div>
-                        
-                        <div class="body__tags-container body__tags-container__content-color">
-                            <input class="body__tags-input" type="radio" id="tag__content"
-                            name="tag" value="Content" v-model="form.tag">
-                            <label for="tag__content" class="body_tags-label">Content</label>
+                        <div v-for="tag in tags" :key="tag">
+                            <div :class="['body__tags-container', `body__tags-container__${tag.toLowerCase()}-color`]">
+                                <input class="body__tags-input" type="radio" :id="`tag__${tag.toLowerCase()}`"
+                                name="tag" :value="`${tag}`" v-model="form.tag">
+                                <label :for="`tag__${tag.toLowerCase()}`" class="body_tags-label">{{ tag }}</label>
+                            </div>
                         </div>
                     </div>
 
@@ -68,7 +52,13 @@
                     tag: '',
                     title: '',
                     description: '',
-                }
+                },
+                tags: [
+                    "Design",
+                    "Research",
+                    "Planning",
+                    "Content"
+                ]
             }
         },
         methods: {

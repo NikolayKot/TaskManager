@@ -135,6 +135,10 @@
     &__content-tag__color {
         background-color: #F59E0B; 
     }
+
+    &__-tag__color {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

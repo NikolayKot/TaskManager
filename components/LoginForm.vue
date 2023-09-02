@@ -33,12 +33,22 @@
         mixins: [SignForm],
         methods: {
             logIn() {
-                if (this.login != localStorage.login || this.password != localStorage.password) {
+                if (this.isLoginDataWrong) {
                     this.isWrong = true;
                     return;
                 }
                 this.isWrong = false;
                 window.location.href = '/profile'
+            }
+        },
+        computed: {
+            isLoginDataWrong() {
+                if (this.login != localStorage.login) {
+                    return true
+                }
+                else if (this.password != localStorage.password) {
+                    return true
+                }
             }
         }
     }

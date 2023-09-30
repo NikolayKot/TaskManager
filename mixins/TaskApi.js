@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
     name: "ModalWindow",
     methods: {
@@ -39,5 +41,14 @@ export default {
                 return true
             }
         }
+    },
+    created() {
+        axios.get("http://localhost:5000/tasks")
+        .then(response => {
+            this.tasksList = response.data
+        })
+        .catch(err => {
+            this.errors.push(err)
+        })
     }
 }

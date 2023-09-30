@@ -24,10 +24,11 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import TaskApi from '~/mixins/TaskApi.js'
     import ModalWindow from '@/components/ModalWindow.vue'
 
     export default {
+        mixins: [TaskApi], 
         data: () => {
             return {
                 tasksList: [],
@@ -52,15 +53,6 @@
                 this.$refs.modal.isModalWindowActive = true
                 this.$refs.modal.sectionId = this.section;
             }
-        },
-        created() {
-            axios.get("http://localhost:5000/tasks")
-            .then(response => {
-                this.tasksList = response.data
-            })
-            .catch(err => {
-                this.errors.push(err)
-            })
         }
     }
 </script>

@@ -49,6 +49,9 @@
                 else if (this.password != localStorage.password) {
                     return true
                 }
+                else {
+                    return false
+                }
             }
         }
     }

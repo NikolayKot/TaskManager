@@ -66,6 +66,9 @@
                 else if (this.login.trim() == '' || this.password.trim() == '') {
                     return true
                 }
+                else {
+                    return false
+                }
             }
         }
     }

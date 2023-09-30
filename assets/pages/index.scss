@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
     background: var(--main-colour);
     display: flex;
@@ -11,14 +15,14 @@
     width: 300px;
     height: 440px;
     border-radius: 20px;
-    background: var(--primary-colour);
+    background: var(--border-colour);
 }
 
 .signup {
     width: 300px;
     height: 520px;
     border-radius: 20px;
-    background: var(--primary-colour);
+    background: var(--border-colour);
 }
 
 .form {
@@ -34,11 +38,12 @@
         font-family: 'DM Sans', sans-serif;
         font-size: 30px;
         margin: 0 auto;
-        color: var(--label);
+        color: var(--label-colour);
         font-weight: 700;
     }
     
     input {
+        padding: 10px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -52,7 +57,7 @@
         letter-spacing: 0.2px;
         color: var(--input-text);
         margin-top: 6px;
-        border: 1px solid var(--border);
+        border: 1px solid var(--border-colour);
         border-radius: 9px;
         font-family: 'DM Sans', sans-serif;
     }
@@ -69,7 +74,7 @@
         line-height: 28px;
         text-align: center;
         letter-spacing: 0.2px;
-        color: var(--primary-colour);
+        color: var(--border-colour);
         text-decoration: none;
         background: var(--accent-colour);
         border-radius: 8px;
@@ -95,7 +100,7 @@
 .switch-container {
     width: 300px;
     height: 88px;
-    background-color: var(--primary-colour);
+    background-color: var(--border-colour);
     border-radius: 20px;
     margin: 0 auto;
     display: flex;
@@ -112,7 +117,7 @@
         line-height: 28px;
         text-align: center;
         letter-spacing: 0.2px;
-        color: var(--primary-colour);
+        color: var(--border-colour);
         text-decoration: none;
         background: var(--accent-colour);
         border-radius: 8px;
@@ -136,7 +141,7 @@
 .label-text {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: var(--label);
+    color: var(--label-colour);
 }
 
 .visible {

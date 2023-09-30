@@ -1,0 +1,43 @@
+.full-name {
+    margin-top: 20px;
+    display: flex;
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 24px;
+    }
+}
+
+.email {
+    height: 45px;
+    width: 512px;
+    border: 1px solid var(--input-border-colour);
+    border-radius: 9px;
+    background: var(--primary-colour);
+    display: inline-flex;
+    align-items: center;
+
+    .search-icon {
+        width: 17px;
+        height: 14px;
+        margin: 15px 0px 16px 16px;
+    }
+    
+    .field-input {
+        width: 468px;
+        border-radius: 9px;
+        border: 0px;
+        height: 18px;
+        padding: 14px 0px 14px 20px;
+    }
+    
+}
+
+.email-field {
+    margin-top: 55px;
+
+    &__label {
+        margin-top: 15px;
+    }
+}

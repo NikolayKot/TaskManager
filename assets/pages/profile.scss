@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+.field-input {
+    width: 308px;
+    height: 45px;
+    padding: 0px 0px 0px 10px;
+    border: 1px solid var(--input-border-colour);
+    border-radius: 9px;
+    background: var(--primary-colour);
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'DM Sans';
+    color: var(--input-placeholder-colour);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .background-picture {
+        width: 100%;
+        height: 282px;
+    }
+    
+    .avatar-zone {
+        width: 137px;
+        height: 137px;
+        border-radius: 100%;
+        position: absolute;
+        background-color: var(--border-colour);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .avatar,
+        .avatar-label {
+            width: 122px;
+            height: 122px;
+            border-radius: 100%;            
+        }
+
+        .avatar-label {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-colour, 0.5);
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            transition: 0.6s; 
+            
+            &:hover {
+                color: rgb(0, 0, 0);
+                background-color: rgba(160, 160, 160, 0.5);
+                cursor: pointer;
+            }
+        }
+
+        .avatar-input {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .active {
+            color: rgba(0,0,0,0);
+            background-color: rgba(0,0,0,0); 
+        }
+    }
+    
+    .block-of-changes {
+        display: flex;
+        align-items: center;
+        height: 90px;
+        
+        .settings-caption {
+            text-align: center;
+            width: 120px;
+            height: 39px;
+            margin-top: 20px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 39px;
+            color: var(--label-colour);
+        }
+    }
+}
+
+.buttons {
+    margin-top: 40px;
+
+    .save-button {
+        color: var(--border-colour);
+        background-color: var(--accent-colour);
+        width: 64px;
+        height: 40px;
+        border-radius: 8px;
+        border: 0px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .cancel-button {
+        width: 80px;
+        background: var(--primary-colour);
+        color: #000000;
+        margin-right: 10px;
+        border: 1px solid var(--input-border-colour);
+    }
+}
+
+.user-information {
+    width: 100%;
+
+    .user-list {
+        margin-top: 30px;
+        padding-left: 60px;
+        display: flex;
+        list-style-type: none;
+
+        .user-details {
+            margin-right: 30px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--input-placeholder-colour);
+            background-color: var(--primary-colour);
+            border: 0px;
+            padding: 0px;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+        .active {
+            color: var(--label-colour);
+            font-weight: 700;
+        }
+    }
+}
+
+.profile-info {
+
+    .field-lable {
+        margin-top: 15px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--label-colour);
+        display: flex;
+        flex-direction: column;
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
+
+@media (max-width:1024px) {
+    .full-name {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px) {
+    .name {
+        width: 308px;
+    }
+}
+
+@media (max-width:560px) {
+    .field-input,
+    .name,
+    .email {
+        width: 208px;
+    }
+}
+
+@media (min-width:501px) {
+    .block-of-changes {
+        padding-left: 217px;
+    }
+
+    .avatar-zone {
+        margin: 234px 0px 0px 50px;
+    }
+}
+
+@media (max-width:500px) {
+    .block-of-changes {
+        margin: auto;
+    }
+
+    .settings-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+    }
+    
+    .user-information {
+        display: flex;
+        justify-content: center;
+
+        .user-list {
+            padding: 0px;
+        }
+    }
+}

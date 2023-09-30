@@ -47,14 +47,28 @@
         },
         methods: {
             register() {
-                if (this.password != this.repeatPassword || this.login == '') {
+                if (this.isRegistrationDataWrong) {
                     this.isWrong = true;
                     return;
-                } 
-                localStorage.login = this.login;
-                localStorage.password = this.password;
+                }
+                localStorage.login = this.login.trim();
+                localStorage.password = this.password.trim();
                 this.isWrong = false;
                 window.location.href = '/profile';
+            },
+            
+        },
+        computed: {
+            isRegistrationDataWrong() {
+                if (this.password != this.repeatPassword) {
+                    return true
+                }
+                else if (this.login.trim() == '' || this.password.trim() == '') {
+                    return true
+                }
+                else {
+                    return false
+                }
             }
         }
     }
